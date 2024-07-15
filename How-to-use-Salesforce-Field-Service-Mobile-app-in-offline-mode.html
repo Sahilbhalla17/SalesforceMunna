@@ -1,0 +1,160 @@
+<html lang="en"><head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J6E08JLDTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J6E08JLDTS');
+</script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>How to use Salesforce Field Service Mobile app in offline mode</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+  
+    <!-- =======================================================
+    * Template Name: Personal - v2.2.0
+    * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+  
+  </head>
+  
+  <body data-gr-c-s-loaded="true" background="white">
+  <!-- ======= Blog Details ======= -->
+    <main id="main">
+      <div id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 portfolio-info" style="background: white;">
+              <br/><br/>
+              <h2 style="color:#000000;"><center><b>FSL Mobile app – Offline Compatibility</b></center></h2><br/>
+              
+              <p>
+                <a href="https://sahilbhalla.in" target="_blank"><img src="assets/img/profile.jpg" style="max-width: 1.2%;height:auto;" alt="">&nbsp;<span style="color:#020860;"><strong>&nbsp;Sahil</strong></span></a>
+                 &nbsp;/&nbsp; July 15, 2024 &nbsp;/&nbsp; <span style="color:#020860;"><strong> Salesforce, Field Service Mobile, Salesforce Field Service, FSL Mobile App Offline</strong></span>
+              </p><br/>
+              <p>
+                <p><h4 style="color:#000000;"><center><b>How to use Salesforce Field Service Mobile app in offline mode?</b></center></h4></p>
+                <p>
+                  Many a times, there will be a requirement to the field service technician where they do not have access to internet and that’s when they would need to use the FSL Mobile app to access the data and need to utilize the functionality set up in the FSL Mobile flows, and, to make these changes in the relative objects like Product requirements or Work Order or Service Appointments etc.
+                </p>
+                <br/>
+                <p>To achieve this, salesforce has provided <b>“Briefcase Builder”</b> which will make FSL Mobile app to be used in offline mode. </p>
+                <br/>
+                <p>Let’s understand this step by step:</p> 
+                
+                <p><strong>First, Let's see what is a Briefcase and Briefcase Builder?</strong></p>
+                <p>
+                  <strong>A briefcase</strong> is a set of rules and filters that select the records to be used in offline mode. 
+                </p>
+                <p>
+                  <strong> A Briefcase Builder,</strong> where you can create and manage your organization’s briefcases. By connecting a briefcase with a compatible mobile app, you can enable your mobile workforce to access the most relevant records, even while offline.
+                </p>
+                <p>
+                  <ul>
+                    <strong> Some Notes to remember:</strong><br/>
+                    <li>Briefcase Builder supports up to 50,000 records that can be retrieved offline.</li>
+                    <li>Briefcase Builder works with both standard and custom Salesforce objects.</li>
+                    <li>With a briefcase, rules/filters can be created for Prime and related objects which are accessible in offline mode.</li>
+                  </ul>
+                </p>
+                <p>
+                  <b>Now, Let's take a look at how to create a BriefCase:</b>
+                </p>
+                <p>
+                  <ul>
+                    <li>From Setup, in the Quick Find box, enter Briefcase Builder, and then select <b>Briefcase Builder.</b></li>
+                    <li>Click <b>New Briefcase.</b></li>
+                    <li>Enter a name and an optional description for your briefcase and Click <b>Next</b></li>
+                    <br/>
+                    <img src="blogs-img/FSL Mobile app - Offline Compatibility/Briefcase1.jpg">
+                    <br/><br/>
+                    <li>Select the Object to add and set up rules to configure to identify the objects that are included in the briefcase along with related object.</li>
+                    <br/>
+                    <img src="blogs-img/FSL Mobile app - Offline Compatibility/Briefcase2.jpg">
+                    <br/><br/>
+                    <li>Related object can be added along with main/prime object along with their own separate rules/filter criteria.</li>
+                    <br/>
+                    <img src="blogs-img/FSL Mobile app - Offline Compatibility/Briefcase3.jpg">
+                    <br/><br/>
+                    <li>Custom metadata types are also available to add optionally with custom metadata rules to the briefcase. We can use custom metadata rule in the briefcase to support a custom flow in the Salesforce Field Service mobile app.</li>
+                    <br/>For more information on custom metadata rules, see <a href = "https://help.salesforce.com/s/articleView?id=sf.briefcase_builder_select_record_data.htm&type=5" style="color: #000dff;">Data Selection.</a>
+                    <br/>
+                    <img src="blogs-img/FSL Mobile app - Offline Compatibility/Briefcase4.jpg">
+                    <br/><br/>
+                    <li>We can assign users or user groups to this briefcase which will determine who can access the records in the briefcase.</li>
+                    <br/>
+                    <ul style="list-style-type:square">
+                      <strong>Some points to consider&nbsp;:</strong>
+                      <br/><br/>
+                      <li>Only user groups are supported. Chatter groups, or collaboration groups, aren’t supported.</li>
+                      <li>
+                        Multiple briefcases can be assigned to same users. <br/><b>Note that,</b> Assigning multiple briefcases to one user will give them access to all the offline data combined from all the assigned briefcases. 
+                      </li>
+                      <li>
+                        If a user doesn’t have access to the field used to define a dataset, then that user can’t access any records for that dataset.
+                      </li>
+                    </ul>
+                    <br/><br/>
+                    <img src="blogs-img/FSL Mobile app - Offline Compatibility/Briefcase5.jpg">
+                    <br/><br/>
+                    <li>Select the connected apps that you want to associate with this briefcase.</li>
+                    <br/>
+                    <img src="blogs-img/FSL Mobile app - Offline Compatibility/Briefcase6.jpg">
+                    <br/><br/>
+                    <li>To save and activate the briefcase, click Activate. To save the briefcase’s settings without activating it for use, click Save.</li>
+                  </ul>
+                </p>
+              <p>
+               <h2><strong><b> Voilà – </b></strong>FSL Mobile App is ready to be used in offline mode. </h2>
+              </p>
+              <br/><br/>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Portfolio Details -->
+    </main><!-- End #main -->
+  
+   <!-- Vendor JS Files -->
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/vendor/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  
+    <script>if( window.self == window.top ) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-55234356-4', 'auto'); ga('send', 'pageview'); } </script>
+  
+  </body>
+  </html>
+  
+  
